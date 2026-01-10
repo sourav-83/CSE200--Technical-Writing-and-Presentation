@@ -1,0 +1,303 @@
+\documentclass[manuscript, review]{acmart}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Generative AI for Teachers with Vision Impairments in the Global South: A Bridge Too Far?}
+
+\author{Manohar Swaminathan}
+\affiliation{%
+  \institution{Microsoft Research}
+  \city{Bangalore}
+  \state{Karnataka}
+  \country{India}
+}
+\email{manohar.swaminathan@microsoft.com}
+
+\author{Tarini Naik}
+\affiliation{%
+  \institution{Microsoft Research}
+  \city{Bengaluru}
+  \state{Karnataka}
+  \country{India}
+}
+\email{tarininaik.design@gmail.com}
+
+\begin{abstract}
+Multimodal generative AI offers transformative opportunities for inclusive education, particularly for children with vision impairments. However, current GenAI deployment assumes digitally literate, sighted educators in well-resourced settings. This paper examines teachers with vision impairments (TVIs) in Indian schools for the blind through interviews with 15 TVIs in Karnataka and a survey of 105 TVIs across 15 states. We reveal critical gaps between GenAI's potential and institutional readiness, documenting challenges including limited device access, inadequate training, institutional resistance, and STEM education barriers. Our findings demonstrate that realizing GenAI's inclusive promise requires moving beyond assistive technology retrofits toward co-designed, contextually grounded systems addressing TVIs' lived realities in the Global South.
+\end{abstract}
+
+\keywords{Accessibility, Education, Vision Impairment, Generative AI, Global South, Teachers, Inclusive Design}
+
+\maketitle
+
+\section{Introduction}
+
+Recent advances in generative artificial intelligence (GenAI), particularly in large language models (LLMs) and their multimodal capabilities, have led to a proliferation of tools with applications across diverse domains including education, accessibility, and communication. With the emergence of scalable systems supporting text, audio, image, and video inputs and outputs, GenAI now offers compelling affordances for reimagining how people learn, teach, and interact with information across languages, modalities, and contexts.
+
+In education, GenAI is rapidly gaining traction as developers and researchers explore its promise to provide adaptive, personalized, and scalable learning interventions at all levels—from early childhood to adult education and lifelong learning. While mainstream discourse includes legitimate concerns around misinformation, equity, and dependency, much of the narrative remains optimistic, highlighting tools that can act as intelligent tutors, assessment assistants, or creative collaborators. Yet, as these technologies continue to shape the future of education, critical questions arise about who is being served and who is being left behind.
+
+The inclusive potential of GenAI remains largely speculative for people with disabilities (PwDs), despite early promising applications. For instance, tools such as Be My AI~\cite{bemyeyes}, which uses image captioning powered by multimodal LLMs, have provided blind and low-vision users with an unprecedented degree of independence in everyday tasks. However, there remains a significant gap in exploring how GenAI might serve more complex, situated educational needs, particularly for children with vision impairments (CVIs) and teachers with vision impairments (TVIs).
+
+Our focus in this paper is on a critical yet under-examined stakeholder group in accessible education: TVIs working in schools for the blind in India. This group plays a vital mediating role in shaping the educational opportunities of CVIs, yet has received minimal attention in prior work on assistive technology, inclusive pedagogy, or HCI for accessibility.
+
+India is home to the world's largest population of CVIs~\cite{mehta2022,businessstandard2022}. These children often study in resource-constrained residential schools for the blind, which differ significantly from inclusive or mainstream education environments. Teachers, many of whom are themselves blind or low-vision, often manage multi-grade classrooms with minimal support and limited access to infrastructure, teaching materials, or digital tools. The conditions of these schools have been further exacerbated by historical patterns of technological exclusion, as seen during the COVID-19 pandemic, when CVIs across the country experienced significant learning loss due to the inaccessibility of online education systems.
+
+Despite the central role of teachers in these settings, there is little empirical work examining their pedagogical practices, technological aspirations, or lived experiences with computing. Existing literature on technology integration in Indian classrooms rarely includes special schools, and even less so the experiences of TVIs. Research on disability and assistive technology in the Global South similarly continues to be sparse, often failing to engage with the material, infrastructural, and sociocultural realities that shape the design and deployment of technology for marginalized users.
+
+In this work, we position TVIs in schools for the blind in India as critical agents in the broader effort to make GenAI and computing technologies more inclusive and locally relevant. Our study investigates both the readiness and the capacity of TVIs to adopt GenAI technologies, and the socio-technical constraints that shape this potential. We ground our investigation in the following research questions:
+
+\begin{itemize}
+\item \textbf{RQ1: What is the readiness of TVIs, and their capacity to leverage computing technologies—including GenAI—to enhance their effectiveness as teachers in schools for the blind?}
+\item \textbf{RQ2: What are the barriers and opportunities in the school environment and the broader socio-technical context that influence their ability to integrate such technologies into their teaching practice?}
+\end{itemize}
+
+By foregrounding the perspectives of TVIs in India, our work contributes to a growing body of HCI4D and accessible computing scholarship that calls for inclusive, situated, and participatory approaches to technology design. We argue that without proactive efforts to center the voices of educators with disabilities—particularly in the Global South—emerging educational technologies risk reproducing longstanding patterns of exclusion, rather than dismantling them.
+
+\section{Related Work}
+
+\subsection{AI in Education}
+
+GenAI's educational potential has attracted significant research attention, spanning intelligent tutoring, automated assessment, and personalized feedback. Notable examples include Khan Academy's Khanmigo assistant~\cite{khanmigo} and Duolingo Max~\cite{duolingo2023}. Global South startups like Teachmint and Unacademy in India, and Squirrel AI in China, demonstrate expanding innovation in AI-driven educational tools for resource-constrained environments.
+
+\subsection{AI for People with Visual Impairments}
+
+Emerging evidence suggests GenAI offers powerful capabilities for people with visual impairments (PVIs) when designed with accessibility as core. Be My AI enables conversational image descriptions, while tools like Seeing AI, Google Lookout, and Envision AI provide object recognition and text reading. However, most tools target everyday living rather than formal education and assume technological familiarity, device access, and digital literacy often absent in Global South contexts. UNICEF reports nearly half of individuals with disabilities worldwide live in poverty~\cite{unicef2020}, with over two-thirds in low-income countries lacking reliable internet. The World Bank notes acute shortages of assistive technologies and inclusive training in low- and middle-income countries~\cite{worldbank2022}.
+
+\subsection{AI for Teachers with Visual Impairments}
+
+TVIs remain largely invisible in current GenAI discourse. Most studies assume sighted teachers in well-resourced classrooms. In the Global North, CVIs receive support from sighted educators, leaving TVIs absent from scholarly and industry discussions. In contrast, India's educational landscape features residential schools for the blind—often underfunded and reliant on philanthropic support—where many teachers themselves have visual impairments. While prior assistive technology work focuses on personal or workplace use, limited exploration exists regarding how TVIs integrate these technologies into teaching practice. Our work addresses this gap by foregrounding TVIs' lived experiences and technological practices.
+
+\section{Methodology}
+
+We employed mixed methods combining semi-structured interviews with TVIs in Karnataka and a nationwide survey across Indian states, with ethics approval from Microsoft Research's Institutional Review Board.
+
+\subsection{Study Procedure}
+
+Research was conducted March 2024-January 2025. We recruited 15 TVIs from 10 Karnataka schools through Vision Empower Trust, conducting 45-120 minute interviews in-person or virtually. Participants received INR 1000 compensation. At interview conclusions, we demonstrated ChatGPT and Be My AI, conducting 20-minute follow-ups approximately 20 days later. Fourteen participants responded to follow-ups.
+
+Based on qualitative themes, we developed a 46-question survey using Microsoft Forms with screen reader compatibility and seven regional language options. Distributed through Vision Empower's network of 150 schools across 17 states reaching 407 TVIs, we received 105 valid responses (26\% response rate) from 15 states, with Karnataka yielding the largest participation.
+
+\subsection{Participants}
+
+Interview participants included 15 TVIs (10 women, 5 men): 9 totally blind, 6 with low vision. Nine handled six or more grade levels; ten taught three or more subjects including English (9), Mathematics (8), Kannada/Hindi (6), Social Science (7), and Science (5). Experience ranged from under 5 years (2) to over 15 years (6).
+
+Survey participants spanned 15 states, primarily Karnataka (n=35), Odisha (n=24), Tamil Nadu (n=15), and Telangana (n=11), demonstrating similar diversity in experience, gender, and responsibilities.
+
+\subsection{Data Analysis}
+
+We employed exploratory sequential mixed-methods design~\cite{creswell2018research}. Qualitative data underwent thematic analysis~\cite{clarke2017thematic} with open coding and iterative refinement by two authors. Core themes included technology adaptation across teaching tasks, systemic constraints, institutional norms, and digital engagement barriers. Survey data utilized descriptive statistics, analyzed by state given distinct education boards and administrative frameworks. Analyses examined whether Karnataka themes appeared across states or if regional variations emerged.
+
+\subsection{Limitations}
+
+Limitations include: (1) 15 Karnataka-only interview participants potentially limiting generalizability; (2) survey responses predominantly from four states; (3) coverage challenges due to schools' small size and geographic dispersion; (4) potential bias toward digitally engaged participants.
+
+\section{Findings}
+
+We present findings across five dimensions: technology's teaching role, systemic challenges, institutional landscape, teacher attitudes, and GenAI awareness.
+
+\subsection{Technology's Role in Teaching}
+
+Technology usage varies significantly across preparation, classroom interaction, and assessment stages.
+
+\subsubsection{Preparation Phase}
+
+TVIs face substantial preparation challenges due to delayed Braille textbook delivery and predominantly manual processes. Books frequently arrive late, forcing reliance on personal knowledge or external resources. One teacher noted covering only 25\% of Science curriculum due to late books (P6). Teachers increasingly use YouTube and Google for educational content, particularly visual explanations, though resources require adaptation for CVIs. As P14 explained, visual content must be made accessible through touch and tactile materials.
+
+Lesson planning remains manual, using Braille slates and styluses for multiple subjects and grades. Only one teacher accessed a Brailler, often unusable due to maintenance issues. High costs (approximately \$550) make Braillers largely inaccessible.
+
+\subsubsection{Classroom Interaction}
+
+Institutional norms constrain classroom technology use. For subjects requiring visual explanations, TVIs depend on sighted colleagues, creating coordination challenges. Despite restrictions, some teachers creatively leverage YouTube videos and voice assistants like Alexa for interactive quizzes. However, institutional skepticism limits innovations, with mobile phone or YouTube use interpreted as lack of teaching effort. P11 stated: "If we play anything on YouTube...they think we are just following YouTube instead of teaching by ourselves. It is quite insulting."
+
+\subsubsection{Revision and Assessment}
+
+Revision relies heavily on oral repetition and memorization due to limited structured resources. Teachers conduct frequent oral revisions since students rarely possess individual materials. P6 contrasted this with mainstream education where students take notes and highlight important content. Examination remains entirely analog, using Braille responses or scribe assistance, with students transitioning to scribes for public board exams.
+
+\subsection{Systemic Challenges}
+
+TVIs face deeply embedded systemic barriers limiting meaningful technology integration.
+
+\subsubsection{Institutional Restrictions}
+
+Strict mobile phone regulations make incorporating digital tools difficult, with technology use perceived as lack of effort rather than instructional aid.
+
+\subsubsection{Multi-Grade Teaching Burden}
+
+Unlike mainstream schools, TVIs frequently teach multiple subjects across multiple grades simultaneously. All 15 interviewed teachers taught multiple grades (M=6.5, SD=2.9), with 9 responsible for six or more levels. P6 described combined classrooms: "1st-3rd has one classroom, 4th-5th has one classroom, and 6th and 7th share one classroom." This arrangement complicates lesson planning and classroom management.
+
+\subsubsection{Teaching Outside Expertise}
+
+Teacher shortages require TVIs to teach subjects beyond formal training, significantly increasing preparation burden. Nine of 15 teachers taught three or more subjects despite expertise in only one or two areas. Teachers particularly struggle with STEM subjects requiring diagrams and experiments. P3 noted: "If a student asks me to explain a graph, I cannot show them because there is no tactile diagram available."
+
+\subsubsection{Lack of Infrastructure}
+
+Many schools lack necessary assistive technology infrastructure. Essential tools like braillers, screen readers, and smartphones are either unavailable or poorly maintained.
+
+\subsection{Institutional and Social Landscape}
+
+Broader institutional policies and societal attitudes significantly shape technology integration.
+
+\subsubsection{Right to Education and Automatic Promotion}
+
+India's Right to Education Act mandates automatic promotion regardless of academic performance. While reducing dropouts, this often results in students progressing without adequate Braille literacy or foundational skills. TVIs also shoulder responsibility for awareness-raising and student recruitment, with P6 noting: "Every year, we do a survey...go door to door finding VI kids and try to enroll them."
+
+\subsubsection{NGO Interventions}
+
+Absent comprehensive governmental support, NGOs like Vision Empower Trust and Winvinaya Foundation provide critical interventions addressing systemic inequities. Teachers described these as transformative. P9 stated: "Since Vision Empower started their program...They have sent a lot of science and math teaching material." NGOs also facilitated first-time smartphone access for many teachers. However, programs remain limited in scope, constrained by funding and geography.
+
+\subsubsection{Braille Literacy vs. Technology}
+
+Significant debate exists around balancing Braille literacy with technology adoption. While appreciating digital tools, teachers remain committed to Braille as foundational. P3 stated: "Even if there is technology, we should not forget Braille...home food is Braille script, and hotel food is technology." Others fear voice-based tools encourage surface-level comprehension, advocating blended approaches where Braille remains central.
+
+\subsection{Teachers' Perspectives}
+
+Teacher perspectives are shaped by motivation, exposure, support systems, and confidence.
+
+\subsubsection{Commitment and Curiosity}
+
+Some teachers exhibit proactive attitudes. P3 shared: "I use Google and YouTube a lot. I also use reading mode." P8 emphasized: "In case there is a new app...I try to learn it myself," indicating digital self-efficacy. P13 experimented with ChatGPT: "I installed ChatGPT. I used it to clear my doubts."
+
+\subsubsection{Disinterest and Reluctance}
+
+Conversely, some showed limited interest. P11 clearly stated: "I am not interested. I feel mobile is not required. I use phone only when needed." Even among curious teachers, usability frustrations led to abandonment. P7 noted: "I used it 2-3 times. I was finding it difficult and I uninstalled it."
+
+\subsection{GenAI Awareness}
+
+We introduced ChatGPT and Be My Eyes at interview conclusions, assessing willingness to experiment.
+
+\subsubsection{Engagement with ChatGPT}
+
+Several teachers attempted using ChatGPT following interviews, but accessibility barriers during login often caused frustration. P1 reported: "I tried everything, I am not able to continue." However, P10 expressed enthusiasm: "I can learn English with this tool...There is no English teacher in our school," highlighting GenAI's dual role for teaching preparation and self-learning.
+
+\subsubsection{Be My AI Awareness}
+
+Most participants had never used or were vaguely aware of Be My Eyes. Some integrated it for reading labels and identifying objects, though P2 highlighted limitations: "There are very less female volunteers...Sometimes this is a very big problem." Notably, except one, no TVIs knew Be My AI prior to demonstration, suggesting well-publicized GenAI accessibility tools haven't reached this community.
+
+\subsubsection{Language and Accessibility}
+
+Preference for local language support emerged as recurring theme. Teachers expressed that Kannada integration would significantly improve usability. Accessibility barriers during onboarding significantly impacted adoption.
+
+\subsection{Survey Analysis}
+
+Our pan-India survey examined whether Karnataka patterns appeared across states. Analysis confirms overwhelming workloads, infrastructure gaps, and technology adoption constraints appear consistently across surveyed states, though intensity varies.
+
+\begin{table*}[t]
+\centering
+\caption{Teacher Workload and Planning Methods Across States (n=85)}
+\label{tab:workload}
+\begin{tabular}{l|l|l|l|l}
+\toprule
+\textbf{Category} & \textbf{Karnataka} & \textbf{Odisha} & \textbf{Tamil Nadu} & \textbf{Telangana} \\
+\midrule
+\multicolumn{5}{l}{\textbf{Workload Demands}} \\
+Grade levels taught & Avg: 5 & up to 13 & 4-6 & Similar \\
+Subjects taught & Up to 6 & Up to 14 & 3-4 & 2-4 \\
+Combined classes & 60\% & 29\% & Lower & Lower \\
+\midrule
+\multicolumn{5}{l}{\textbf{Lesson Planning Methods}} \\
+Brailler use & 32.3\% (11/35) & 62.5\% (15/24) & 40\% (6/15) & Lower \\
+Handwritten & 32.3\% (11/35) & 8.3\% (2/24) & Similar & Lower \\
+Digital documents & 35.5\% (12/35) & 12.5\% (3/24) & Lower & 55.5\% (6/11) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\caption{Technology Usage and Perceived Benefits Across States (n=85)}
+\label{tab:technology}
+\begin{tabular}{l|l|l|l|l}
+\toprule
+\textbf{Category} & \textbf{Karnataka} & \textbf{Odisha} & \textbf{Tamil Nadu} & \textbf{Telangana} \\
+\midrule
+\multicolumn{5}{l}{\textbf{Technology Usage}} \\
+For preparation & 77.1\% (27/35) & 45.8\% (11/24) & 86.7\% (13/15) & 81.8\% (9/11) \\
+For teaching & 71.4\% (25/35) & 45.8\% (11/24) & 80.0\% (12/15) & 81.8\% (9/11) \\
+\midrule
+\multicolumn{5}{l}{\textbf{Perceived Benefits}} \\
+Knowledge access & 76.2\% (16/21) & 66.7\% (8/12) & 86.7\% (13/15) & 81.8\% (9/11) \\
+Lesson planning & 47.6\% (10/21) & 41.7\% (5/12) & 60.0\% (9/15) & 54.5\% (6/11) \\
+Classroom use & 38.1\% (8/21) & 20.8\% (3/12) & 53.3\% (8/15) & 45.5\% (5/11) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\caption{Infrastructure Availability Across States (n=85)}
+\label{tab:infrastructure}
+\begin{tabular}{l|l|l|l|l}
+\toprule
+\textbf{Resource} & \textbf{Karnataka} & \textbf{Odisha} & \textbf{Tamil Nadu} & \textbf{Telangana} \\
+\midrule
+Internet access & 26\% (9/35) & 17\% (4/24) & 40\% (6/15) & 55\% (6/11) \\
+Tactile aids & 60\% (21/35) & 67\% (16/24) & 33.3\% (5/15) & 9.1\% (1/11) \\
+Hands-on kits & 23\% (8/35) & 21\% (5/24) & 40\% (6/15) & 18.2\% (2/11) \\
+Lab facilities & 3\% (1/35) & Similar & Higher & Higher \\
+Books & Not specified & Not specified & Available & 63.6\% (7/11) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Findings indicate that while teachers recognize technology benefits and demonstrate adoption where possible, infrastructure gaps and insufficient institutional support continue shaping practice. Even states with better infrastructure face gaps in accessible teaching aids and institutional backing, with no consistent relationship between salary, workload, and technology adoption.
+
+\section{Discussion}
+
+Our findings reveal a fundamental paradox: while TVIs express enthusiasm and commitment toward technology, systemic barriers significantly limit adoption. Across all teaching stages, teachers independently turn to YouTube, Google, and voice assistants, yet efforts remain fragmented due to school norms, limited training, and infrastructure gaps. This disconnect underscores the need to look beyond individual readiness toward structural change.
+
+\subsection{Schools as Gatekeepers}
+
+One significant barrier lies not in teacher readiness but in school culture. Teachers reported that using YouTube or mobile phones is viewed as lack of effort, forcing them to seek permission for minor interventions. This institutional skepticism creates cycles where teachers—despite initiative—are discouraged from experimentation. This repositions "readiness" from individual capacity to systemic design. Without institutional buy-in and policy support, even motivated teachers struggle with sustainable integration.
+
+\subsection{GenAI's Promise}
+
+Within constrained environments, GenAI holds immense potential as mediator—between teachers and inaccessible content, between complex subjects and tactile/audio-first delivery, and between rigid schooling structures and dynamic CVI needs. GenAI could convert video content into tactile descriptions, generate differentiated materials for multi-grade classrooms, create accessible STEM representations, and serve as personal learning assistants for teachers instructing outside expertise areas.
+
+\subsection{Designing for Context}
+
+Yet implementation must be deeply contextualized. ChatGPT and Be My Eyes saw only partial uptake due to poor login accessibility, unfamiliar interfaces, limited regional language options, and gendered concerns around volunteer interaction. Design implications include: (1) multilingual support for regional languages; (2) accessible onboarding fully compatible with screen readers; (3) context-aware content generation understanding schools for the blind; (4) gender and privacy considerations for human-assisted tools; (5) offline and low-bandwidth modes given inconsistent connectivity.
+
+\subsection{Global Disparities}
+
+In the Global North, TVIs experiment with ChatGPT for lesson planning and content structuring, though formal research remains limited. This may reflect that Global North CVIs typically receive support from sighted educators in inclusive classrooms. In contrast, Global South TVIs—often blind themselves in segregated schools—encounter multiple friction points including inaccessible interfaces, unreliable connectivity, and limited linguistic relevance. These disparities reflect structural differences, with Global North efforts benefiting from systemic support while Global South adoption remains fragmented and reliant on individual initiative or NGO interventions. GenAI development assumes user contexts (stable internet, English proficiency, device ownership) that don't hold in Global South settings, risking widened inequities.
+
+\subsection{From Individual Effort to Systemic Support}
+
+Future AI interventions must move beyond narratives of teachers as isolated innovators toward system-supported infrastructure. TVIs should not shoulder discovery, adaptation, and advocacy burdens alone. Successful GenAI integration requires multi-level intervention:
+
+\textbf{Policy:} Education departments must update policies recognizing appropriate technology use, countering perceptions that technology indicates laziness.
+
+\textbf{Institutional:} Schools need dedicated technology coordinators helping TVIs troubleshoot and integrate tools, with mandatory compensated professional development.
+
+\textbf{Infrastructure:} Reliable connectivity, functional devices, and maintained assistive technologies must be standard provisions, not occasional luxuries.
+
+\textbf{Design:} Technology companies must engage TVIs during design, not just deployment, using co-design approaches centering disabled educators' lived experiences.
+
+\textbf{Community:} Peer support networks among TVIs can share best practices, troubleshoot challenges, and collectively advocate for resources.
+
+Current reliance on individual initiative and NGO interventions, while admirable, is neither sustainable nor scalable. Without systemic change, GenAI's promise for inclusive education will remain unrealized for most TVIs and CVIs in the Global South.
+
+\section{Conclusion}
+
+Our study foregrounds TVIs' lived experiences in India—an essential yet overlooked group in inclusive education and emerging technology conversations. While multimodal GenAI holds significant promise for enhancing CVIs' educational experience, findings reveal stark contrasts between this promise and material, infrastructural, and institutional realities in which teachers operate.
+
+TVIs demonstrate remarkable resilience, creativity, and commitment leveraging technology despite institutional barriers and resource constraints. However, systemic challenges—restrictive policies, overwhelming multi-grade burdens, inadequate infrastructure, insufficient training—severely limit meaningful digital tool integration. The disconnect between GenAI's potential and ecosystem readiness represents a critical gap requiring attention.
+
+Our work contributes to emerging HCI and AI for education agendas insisting on equity as foundational design principle. By positioning TVIs as co-designers of educational futures, we call for paradigm shifts in how AI tools are imagined and deployed, moving beyond universal design assuming sighted, resourced users toward context-specific, participatory processes centering disabled educators' needs and expertise in the Global South.
+
+Future work should explore: (1) co-design processes actively involving TVIs in developing GenAI educational tools; (2) longitudinal studies examining sustained GenAI integration impact with proper support infrastructure; (3) comparative analyses across Global South contexts understanding regional variations; (4) policy research investigating educational system restructuring supporting technology-enabled inclusive pedagogy.
+
+Without such paradigm shifts addressing entire support ecosystems, GenAI's promise might remain just that. Realizing GenAI's inclusive potential requires systemic transformation recognizing TVIs as essential change agents in creating truly accessible educational futures.
+
+\section*{Acknowledgments}
+
+We thank the teachers who generously shared their time and insights. We thank Rajesh S. Paali, Venkatesh Deshpande, Rajeswari Pandurangan, Devidatta Ghosh, and Rishi Vadhana from Vision Empower Trust for invaluable support with recruitment, coordination, and translation. We also thank Roshni Poddar, Nischith Shadagopan, Anush Kini, and Adharsh Kamath for interview phase assistance.
+
+\bibliographystyle{ACM-Reference-Format}  
+\bibliography{references}
+
+\end{document}
