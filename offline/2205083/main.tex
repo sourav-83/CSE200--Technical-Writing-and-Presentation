@@ -27,7 +27,40 @@
 \email{tarininaik.design@gmail.com}
 
 \begin{abstract}
-Multimodal generative AI offers transformative opportunities for inclusive education, particularly for children with vision impairments. However, current GenAI deployment assumes digitally literate, sighted educators in well-resourced settings. This paper examines teachers with vision impairments (TVIs) in Indian schools for the blind through interviews with 15 TVIs in Karnataka and a survey of 105 TVIs across 15 states. We reveal critical gaps between GenAI's potential and institutional readiness, documenting challenges including limited device access, inadequate training, institutional resistance, and STEM education barriers. Our findings demonstrate that realizing GenAI's inclusive promise requires moving beyond assistive technology retrofits toward co-designed, contextually grounded systems addressing TVIs' lived realities in the Global South.
+
+Multimodal generative artificial intelligence (GenAI) offers new 
+affordances for inclusive education, particularly for children with 
+vision impairments (CVIs), by enabling alternate representations 
+that align with non-visual mental models. While GenAI tools are 
+rapidly reshaping mainstream educational practices worldwide, 
+their design and deployment often presume a digitally literate, 
+sighted teaching workforce and well-resourced institutional con
+texts. In this paper, we address a critical gap in HCI and accessibility 
+research: the near-total absence of empirical studies on teachers 
+with vision impairments (TVIs), who play a central pedagogical role 
+in schools for the blind across the Global South. Through in-depth 
+interviews with 15 TVIs in Karnataka and a nationwide survey of 
+105 TVIs across 15 Indian states, we surface the everyday teaching 
+practices, technological aspirations, and systemic constraints that 
+shape their engagement with digital technologies, including GenAI. 
+Our findings reveal a disjuncture between the potential of GenAI 
+and the readiness of the institutional and infrastructural ecosys
+tem in which TVIs operate. We document pervasive challenges, 
+including limited access to devices and connectivity, insufficient 
+training, resistance from school management, and entrenched bar
+riers to STEM education, while also highlighting sites of resilience, 
+innovation, and professional commitment. This study advances the 
+HCI discourse by centering disabled educators as key agents in 
+the design of accessible educational futures. We argue that realiz
+ing GenAI’s inclusive potential requires moving beyond assistive 
+technology retrofits toward co-designed, contextually grounded 
+systems that respond to the lived realities of TVIs in the Global 
+South. \\
+\\
+\textbf{\large{CCS Concepts} \\
+• Human-centered computing → Empirical studies in acces
+sibility; Empirical studies in HCI.}
+\\
 \end{abstract}
 
 \keywords{Accessibility, Education, Vision Impairment, Generative AI, Global South, Teachers, Inclusive Design}
@@ -36,13 +69,10 @@ Multimodal generative AI offers transformative opportunities for inclusive educa
 
 \section{Introduction}
 
-Recent advances in generative artificial intelligence (GenAI), particularly in large language models (LLMs) and their multimodal capabilities, have led to a proliferation of tools with applications across diverse domains including education, accessibility, and communication. With the emergence of scalable systems supporting text, audio, image, and video inputs and outputs, GenAI now offers compelling affordances for reimagining how people learn, teach, and interact with information across languages, modalities, and contexts.
-
-In education, GenAI is rapidly gaining traction as developers and researchers explore its promise to provide adaptive, personalized, and scalable learning interventions at all levels—from early childhood to adult education and lifelong learning. While mainstream discourse includes legitimate concerns around misinformation, equity, and dependency, much of the narrative remains optimistic, highlighting tools that can act as intelligent tutors, assessment assistants, or creative collaborators. Yet, as these technologies continue to shape the future of education, critical questions arise about who is being served and who is being left behind.
-
-The inclusive potential of GenAI remains largely speculative for people with disabilities (PwDs), despite early promising applications. For instance, tools such as Be My AI~\cite{bemyeyes}, which uses image captioning powered by multimodal LLMs, have provided blind and low-vision users with an unprecedented degree of independence in everyday tasks. However, there remains a significant gap in exploring how GenAI might serve more complex, situated educational needs, particularly for children with vision impairments (CVIs) and teachers with vision impairments (TVIs).
-
-Our focus in this paper is on a critical yet under-examined stakeholder group in accessible education: TVIs working in schools for the blind in India. This group plays a vital mediating role in shaping the educational opportunities of CVIs, yet has received minimal attention in prior work on assistive technology, inclusive pedagogy, or HCI for accessibility.
+Recent developments in generative artificial intelligence (GenAI), especially concerning large language models (LLMs) and their multimodal functionalities, have resulted in a widespread emergence of tools applicable across various fields including education, accessibility, and communication. As scalable systems capable of processing and generating text, audio, image, and video have materialized, GenAI now presents significant opportunities for transforming the ways individuals learn, instruct, and engage with information across different languages, formats, and settings.
+Within the educational sphere, GenAI is experiencing rapid adoption as developers and scholars investigate its potential to deliver adaptive, customized, and expandable learning solutions across all educational stages—from preschool through adult education and continuous learning. Although mainstream discussions acknowledge valid concerns regarding misinformation, fairness, and over-reliance, a substantial portion of the conversation remains hopeful, emphasizing technologies that can function as smart tutors, evaluation aids, or innovative partners. Nevertheless, as these innovations continue to influence education's trajectory, important questions emerge regarding whose needs are being addressed and whose are being overlooked.
+The potential of GenAI to promote inclusivity remains predominantly theoretical for people with disabilities (PwDs), notwithstanding some early encouraging implementations. For example, applications like Be My AI, which employs image description technology driven by multimodal LLMs, have offered blind and low-vision individuals an extraordinary level of autonomy in routine activities. Nevertheless, a substantial void exists in investigating how GenAI could address more intricate, context-specific educational requirements, especially for children with vision impairments (CVIs) and teachers with vision impairments (TVIs).
+Our emphasis in this research centers on a crucial but insufficiently studied stakeholder population in accessible education: TVIs employed in Indian schools for the blind. This population occupies an essential intermediary position in determining the educational possibilities available to CVIs, yet has garnered scant attention in previous research on assistive technology, inclusive teaching practices, or HCI for accessibility.
 
 India is home to the world's largest population of CVIs~\cite{mehta2022,businessstandard2022}. These children often study in resource-constrained residential schools for the blind, which differ significantly from inclusive or mainstream education environments. Teachers, many of whom are themselves blind or low-vision, often manage multi-grade classrooms with minimal support and limited access to infrastructure, teaching materials, or digital tools. The conditions of these schools have been further exacerbated by historical patterns of technological exclusion, as seen during the COVID-19 pandemic, when CVIs across the country experienced significant learning loss due to the inaccessibility of online education systems.
 
@@ -194,13 +224,13 @@ Our pan-India survey examined whether Karnataka patterns appeared across states.
 \textbf{Category} & \textbf{Karnataka} & \textbf{Odisha} & \textbf{Tamil Nadu} & \textbf{Telangana} \\
 \midrule
 \multicolumn{5}{l}{\textbf{Workload Demands}} \\
-Grade levels taught & Avg: 5 & up to 13 & 4-6 & Similar \\
+Grade levels & Avg: 5 & up to 13 & 4-6 & Similar \\
 Subjects taught & Up to 6 & Up to 14 & 3-4 & 2-4 \\
 Combined classes & 60\% & 29\% & Lower & Lower \\
 \midrule
 \multicolumn{5}{l}{\textbf{Lesson Planning Methods}} \\
 Brailler use & 32.3\% (11/35) & 62.5\% (15/24) & 40\% (6/15) & Lower \\
-Handwritten & 32.3\% (11/35) & 8.3\% (2/24) & Similar & Lower \\
+Handwritten & 32.3\% (11/35) & 8.3\% (2/24) & Similar  to Braillers & Lower \\
 Digital documents & 35.5\% (12/35) & 12.5\% (3/24) & Lower & 55.5\% (6/11) \\
 \bottomrule
 \end{tabular}
@@ -219,9 +249,9 @@ For preparation & 77.1\% (27/35) & 45.8\% (11/24) & 86.7\% (13/15) & 81.8\% (9/1
 For teaching & 71.4\% (25/35) & 45.8\% (11/24) & 80.0\% (12/15) & 81.8\% (9/11) \\
 \midrule
 \multicolumn{5}{l}{\textbf{Perceived Benefits}} \\
-Knowledge access & 76.2\% (16/21) & 66.7\% (8/12) & 86.7\% (13/15) & 81.8\% (9/11) \\
+Knowledge & 76.2\% (16/21) & 66.7\% (8/12) & 86.7\% (13/15) & 81.8\% (9/11) \\
 Lesson planning & 47.6\% (10/21) & 41.7\% (5/12) & 60.0\% (9/15) & 54.5\% (6/11) \\
-Classroom use & 38.1\% (8/21) & 20.8\% (3/12) & 53.3\% (8/15) & 45.5\% (5/11) \\
+Classroom & 38.1\% (8/21) & 20.8\% (3/12) & 53.3\% (8/15) & 45.5\% (5/11) \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -234,7 +264,7 @@ Classroom use & 38.1\% (8/21) & 20.8\% (3/12) & 53.3\% (8/15) & 45.5\% (5/11) \\
 \toprule
 \textbf{Resource} & \textbf{Karnataka} & \textbf{Odisha} & \textbf{Tamil Nadu} & \textbf{Telangana} \\
 \midrule
-Internet access & 26\% (9/35) & 17\% (4/24) & 40\% (6/15) & 55\% (6/11) \\
+Internet & 26\% (9/35) & 17\% (4/24) & 40\% (6/15) & 55\% (6/11) \\
 Tactile aids & 60\% (21/35) & 67\% (16/24) & 33.3\% (5/15) & 9.1\% (1/11) \\
 Hands-on kits & 23\% (8/35) & 21\% (5/24) & 40\% (6/15) & 18.2\% (2/11) \\
 Lab facilities & 3\% (1/35) & Similar & Higher & Higher \\

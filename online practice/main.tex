@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+
+\title{CSE200: Online-1 on \LaTeX}
+\author{Sourav (2205083)}
+\date{January 3, 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Document preparation systems are essential for producing structured and pro
+fessional technical documents. \textbf{LATEX} allows authors to focus on content
+while maintaining consistent formatting. This article demonstrates formatted
+text, lists, equations, tables, and figures using commands taught in class.
+\subsection{Text Emphasis and Fonts}
+This sentence contains \textbf{bold text}, \textit{italic text}, \emph{emphasized text,} and \underline{underlined text.}
+Font sizes can also vary such as \large{Large text}, \small{small text}, and 
+\Large{huge text.}
+\section{List structures}
+\subsection{Mixed and Nested Lists}
+\begin{itemize}
+    \item Primary Feature
+    \item Secondary Features
+    \begin{enumerate}
+        \item Formatting control
+        \item Mathematical typesetting
+        \begin{itemize}
+            \item[-] Inline math
+            \item[-] Display math
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+\textbf{Note} Lists can be customized
+\section{Mathematical Modeling}
+Mathematical expressions are often used to represent data relationships. Consider variables $x_i$, $y$, and $z^2$.
+\subsection{Displayed Equations}
+
+    
+\begin{equation}
+    y_i = \alpha x_j^2 + \beta x_j + \gamma
+\end{equation}
+\begin{align}
+    T 
+    &= \sum_{i=1}^{n} (x_i - \mu)^2 \nonumber \\
+    &= \sum_{i=1}^{n} x_i^2 - 2\mu \sum_{i=1}^{n} x_i + n\mu ^2
+\end{align}
+
+\[
+f(x_i) = 
+\begin{cases}
+\frac{x_i^2}{\sigma^2} & \text{if } x_i \geq 0 \\
+\frac{|x_i|}{\sigma} & \text{if } x_i < 0
+\end{cases}
+\]
+\section{Tabular Data Presentation}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|ll|}
+\hline
+\multirow{2}{*}{Module}   & \multicolumn{2}{l|}{Score}        \\ \cline{2-3} 
+                          & \multicolumn{1}{l|}{Theory} & Lab \\ \hline
+Module A                  & \multicolumn{1}{l|}{75}     & 80  \\ \hline
+\multirow{2}{*}{Module B} & 88                          & 90  \\
+                          & 85                          & 87  \\ \hline
+Module C                  & \multicolumn{1}{l|}{70}     & 72  \\ \hline
+\end{tabular}
+\caption{Module-wise Performance Summary}
+\end{table}
+\section{Visual Comparison}
+\subsection{Asymmetric Subfigure Layout}
+
+\begin{figure}[H]
+\centering
+
+
+\begin{subfigure}{0.8\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{A.png}
+    \caption{Main Diagram}
+\end{subfigure}
+
+\vspace{1em}
+
+\begin{subfigure}{0.35\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{B.png}
+    \caption{Detail B}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.35\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{C.png}
+    \caption{Detail C}
+\end{subfigure}
+
+\caption{Asymmetric layout with one dominant figure}
+\end{figure}
+
+
+    
+
+\end{document}
